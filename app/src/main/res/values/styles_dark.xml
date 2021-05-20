@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DarkFloatingActionButtonIcon" >
+        <item name="lmd_state">@xml/fab_icon_states</item>
+        <item name="lmd_curState">0</item>
+        <item name="lmd_padding">2dp</item>
+        <item name="lmd_animDuration">400</item>
+        <item name="lmd_interpolator">@android:anim/accelerate_decelerate_interpolator</item>
+        <item name="lmd_strokeSize">4dp</item>
+        <item name="lmd_strokeColor">#FF000000</item>
+        <item name="lmd_strokeCap">round</item>
+        <item name="lmd_strokeJoin">round</item>
+        <item name="lmd_clockwise">true</item>
+    </style>
+    <style name="DarkFABWave" parent="Material.Drawable.Ripple.Wave">
+        <item name="fab_backgroundColor">#FF494949</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">none</item>
+    </style>
+    <style name="DarkFABWaveColor" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="fab_backgroundColor">@color/colorAccent</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">afterRelease</item>
+    </style>
+</resources>

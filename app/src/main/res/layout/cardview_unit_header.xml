@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardBackgroundColor="@color/colorPrimaryHalf"
+        app:cardCornerRadius="1dp"
+        app:cardMaxElevation="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical"
+                android:dividerPadding="2dp"
+                android:divider="@color/colorDivider">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="标准日本语-初级上册"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/title"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_review_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/title"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_marginTop="@dimen/margin_top_small"
+                    android:text="第1课" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

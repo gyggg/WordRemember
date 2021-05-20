@@ -1,0 +1,33 @@
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="单词测试设置（没有特殊需要建议维持默认设置）">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="key_auto_create_history_name"
+            android:title="自动生成历史名称"
+            android:summary="测试结束后不会弹出自定义历史纪录的窗口"
+            android:defaultValue="true" />
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="key_is_c2j"
+            android:title="用日文作答"
+            android:summary="开启该模式：\n测试时，给出中文，答案需输入日文。\n关闭该模式：\n测试时给出日文，答案需输入中文"
+            android:defaultValue="true" />
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="key_test_hide_kanji"
+            android:title="纯假名模式"
+            android:summary="测试时，不显示日语单词的汉字"
+            android:defaultValue="false" />
+
+        <android.support.v7.preference.Preference
+            android:key="key_skip_types"
+            android:persistent="true"
+            android:summary="设置测试中自动略过部分词性的单词"
+            android:title="自动跳过部分词性" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/myToolbarTitle"
+                    android:text="@string/fragment_test_word_title"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_clear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/bg_btn_clear"
+                    android:clickable="true" />
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+        <View android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/toolbar_dropshadow"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            style="@style/myRecyclerViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/btn_start_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="36dp"
+        materialdesign:iconDrawable="@drawable/edit"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/toolbar_button_size"
+                android:layout_height="@dimen/toolbar_button_size"
+                android:layout_gravity="left|center"
+                android:background="@drawable/back"/>
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/myToolbarTitle"
+                android:text="自由测试"/>
+        </FrameLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/toolbar_dropshadow"/>
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:layout_height="56dp">
+
+        <TextView
+            android:id="@+id/tv_last_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="上一词："
+            android:textColor="@color/colorSecondaryText" />
+
+        <TextView
+            android:id="@+id/tv_last_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="13sp"
+            android:text="答案："
+            android:textColor="@color/colorSecondaryText" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="36sp"
+        tools:text="体育馆"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        tools:text="[代]"
+        android:layout_below="@+id/tv_translate"
+        android:id="@+id/tv_word_type" />
+
+    <TextView
+        android:id="@+id/tv_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        tools:text="体育館（たいいくかん）"
+        android:textSize="24sp"
+        android:layout_below="@+id/tv_word_type"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/et_input_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_commit"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:hint="在此输入答案"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp" />
+
+    <com.rey.material.widget.Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_test_commit_handle"
+        android:textColor="#FFF"
+        android:text="提交"
+        android:layout_above="@+id/btn_skip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <com.rey.material.widget.Button
+        android:id="@+id/btn_skip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_test_skip_handle"
+        android:textColor="#FFF"
+        android:text="跳过（按正确论处）"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="36dp" />
+
+</RelativeLayout>

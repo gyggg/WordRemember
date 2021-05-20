@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/myToolbarTitle"
+                android:text="每日任务" />
+        </FrameLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+
+    <RelativeLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:background="#00FFFFFF"
+            android:id="@+id/middle_view"
+            android:layout_width="1px"
+            android:layout_height="1px"/>
+
+        <com.gc.materialdesign.views.Card
+            android:layout_above="@id/middle_view"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_study">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/cardview_light_background"
+                android:layout_height="280dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/tv_unit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:textSize="20sp"
+                    tools:text="《词性专项训练——副词》"/>
+
+                <TextView
+                    android:id="@+id/tv_study_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_unit_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp"
+                    android:text="修改计划"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_unit_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_unit_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    tools:text="【第 1 / 3 部分】"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/container_button"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_start_test"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="直接测试"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_start_study"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorAccent"
+                        android:text="开始记忆" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_start_more_study"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorAccent"
+                        android:text="学习更多" />
+
+                </LinearLayout>
+
+                <com.rey.material.widget.ProgressView
+                    android:id="@+id/pv_study_progress"
+                    app:pv_progressStyle="@style/Material.Drawable.LinearProgress"
+                    app:pv_circular="false"
+                    app:pv_progress="0.56"
+                    app:lpd_strokeColor="@color/colorPrimary"
+                    app:pv_progressMode="determinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_above="@id/container_button"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_unit_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/pv_study_progress"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="0 / 30"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+        </com.gc.materialdesign.views.Card>
+        <com.gc.materialdesign.views.Card
+            android:id="@+id/card_review"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/middle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/cardview_light_background">
+
+                <TextView
+                    android:id="@+id/tv_review_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_review_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp"
+                    android:text="修改复习强度"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_review_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    tools:text="每日复习"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_review_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_review_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    tools:text="【最近 2 日】"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="16sp" />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/container_review_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_start_review"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="开始复习"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <com.rey.material.widget.ProgressView
+                    android:id="@+id/pv_review_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_above="@id/container_review_button"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:pv_progressMode="determinate"
+                    app:lpd_strokeColor="@color/colorPrimary"
+                    app:pv_circular="false"
+                    app:pv_progress="0.56"
+                    app:pv_progressStyle="@style/Material.Drawable.LinearProgress" />
+
+                <TextView
+                    android:id="@+id/tv_review_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/pv_review_progress"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="0 / 68"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+    </com.gc.materialdesign.views.Card>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

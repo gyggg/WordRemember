@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="fab_wave">
+        <item>@style/LightFABWave</item>
+        <item>@style/DarkFABWave</item>
+    </array>
+    <array name="fab_wave_color">
+        <item>@style/LightFABWaveColor</item>
+        <item>@style/DarkFABWaveColor</item>
+    </array>
+</resources>

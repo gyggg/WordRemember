@@ -1,0 +1,81 @@
+ext {
+    var = '1.8'
+    var1 = '1.8'
+}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "me.japanesestudy.app.wordremember"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility var
+        targetCompatibility var1
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'org.xutils:xutils:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.5'
+    testCompile 'junit:junit:4.12'
+    //底部按钮条
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.github.vajro:MaterialDesignLibrary:1.6'
+    compile 'com.github.Yalantis:GuillotineMenu-Android:1.2'
+    compile 'com.github.traex.expandablelayout:library:1.2.2'
+    compile 'com.github.zyyoona7:EasyPopup:1.0.2'
+    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    compile 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    compile ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar'){
+        transitive=true
+    }
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.github.rey5137:material:1.2.4'
+    // Stetho core
+    compile 'com.facebook.stetho:stetho:1.3.1'//If you want to add a network helper
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    compile 'com.oushangfeng:PinnedSectionItemDecoration:1.2.4'
+    compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.4'
+    compile 'com.github.traex.rippleeffect:library:1.3'
+    compile 'uk.co.samuelwall:material-tap-target-prompt:2.6.0'
+    compile 'com.android.support:preference-v7:26.1.0'
+    compile 'com.android.support:preference-v14:26.1.0'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0' //添加插件retrolambda
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
